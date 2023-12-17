@@ -1,4 +1,4 @@
-const employee = {
+/*const employee = {
     name: "Dan Oswald",
     streetAddress: "2876 W. 53rd Ave.",
 };
@@ -24,4 +24,31 @@ function deleteFromEmployeeByKey(employee, key) {
 function destructivelyDeleteFromEmployeeByKey(employee, key) {
     delete employee[key];
     return employee;
+}*/
+
+const employee = {
+    name: "Dan Oswald",
+    streetAddress: "1540 Morgan Ave.",
+}
+
+function updateEmployeeWithKeyAndValue(object, key, value) {
+    let newEmployee = {...object}
+    newEmployee[key] = value;
+    return newEmployee;
+}
+
+function destructivelyUpdateEmployeeWithKeyAndValue(object, key, value) {
+    object[key] = value;
+    return object;
+}
+
+function deleteFromEmployeeByKey(object, key) {
+    let newObject = {...object};
+    delete(newObject[key]);
+    return newObject;
+}
+
+function destructivelyDeleteFromEmployeeByKey(object, key) {
+    delete(object[key]);
+    return object;
 }
